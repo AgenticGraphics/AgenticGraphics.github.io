@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="460" viewBox="0 0 520 460" fill="none">
+  <title>An agent works across geometry, rendering, and simulation</title>
+  <desc>A graphics goal guides a planning agent. The agent selects tools for geometry processing, rendering, and simulation, then observes their results and uses that feedback to refine its next action.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r=".8" fill="#b1aaa0" opacity=".3"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="m2 1 6 4-6 4" stroke="#b64b2d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <radialGradient id="render-light" cx="30%" cy="25%" r="80%">
+      <stop stop-color="#fffaf0"/>
+      <stop offset=".42" stop-color="#edc9ad"/>
+      <stop offset="1" stop-color="#b64b2d"/>
+    </radialGradient>
+  </defs>
+  <rect width="520" height="460" fill="url(#dots)"/>
+
+  <!-- A goal gives the agent intent. -->
+  <g font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="52" y="37" fill="#686c63" font-size="16">A graphics goal</text>
+    <rect x="50" y="50" width="224" height="55" rx="7" fill="#f7f6f2" stroke="#d1d3c8" stroke-width="1.5"/>
+    <path d="m65 71 6 6-6 6" stroke="#b64b2d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="82" y="84" fill="#242923" font-size="18">Solve a graphics task</text>
+  </g>
+  <path d="M109 105v44" stroke="#b64b2d" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="125" y="135" fill="#686c63" font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" font-size="17">Plan</text>
+
+  <!-- A geometric assistant makes the agent explicit. -->
+  <rect x="46" y="163" width="126" height="110" rx="22" fill="#ede5da" stroke="#b64b2d" stroke-width="1.8"/>
+  <path d="M109 181v-8" stroke="#b64b2d" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="109" cy="171" r="3" fill="#b64b2d"/>
+  <rect x="65" y="187" width="88" height="51" rx="15" fill="#f7f6f2" stroke="#b64b2d" stroke-width="1.8"/>
+  <rect x="84" y="202" width="8" height="11" rx="4" fill="#b64b2d"/>
+  <rect x="125" y="202" width="8" height="11" rx="4" fill="#b64b2d"/>
+  <path d="M100 225h18M58 207v10M160 207v10" stroke="#b64b2d" stroke-width="1.8" stroke-linecap="round"/>
+  <g stroke="#b64b2d" stroke-width="1.5" stroke-linecap="round" opacity=".7">
+    <path d="m90 251 3 3 5-6M105 251h22"/>
+  </g>
+  <text x="109" y="300" text-anchor="middle" fill="#242923" font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="600">Agent</text>
+
+  <!-- The agent selects tools across core areas of computer graphics. -->
+  <path d="M179 218h76M255 111v228" stroke="#b64b2d" stroke-width="1.8" stroke-linecap="round"/>
+  <g stroke="#b64b2d" stroke-width="1.8" marker-end="url(#arrow)">
+    <path d="M255 111h31"/>
+    <path d="M255 225h31"/>
+    <path d="M255 339h31"/>
+  </g>
+  <text x="213" y="200" text-anchor="middle" fill="#b64b2d" font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="500">Act</text>
+  <g stroke="#686c63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m204 233-6 6 6 6m20-12 6 6-6 6m-12-13-6 14"/>
+  </g>
+
+  <!-- Results from each task return to the same observation loop. -->
+  <g stroke="#b64b2d" stroke-width="1.5" stroke-dasharray="4 5" stroke-linecap="round">
+    <path d="M500 111h11v269M500 225h11M500 339h11"/>
+    <path d="M511 380c0 54-402 57-402-23v-37" marker-end="url(#arrow)"/>
+  </g>
+
+  <g fill="#f7f6f2" stroke="#d1d3c8" stroke-width="1.3">
+    <rect x="296" y="65" width="204" height="92" rx="9"/>
+    <rect x="296" y="179" width="204" height="92" rx="9"/>
+    <rect x="296" y="293" width="204" height="92" rx="9"/>
+  </g>
+
+  <!-- Geometry: an editable triangulated mesh. -->
+  <g stroke="#b64b2d" stroke-width="1.3" stroke-linejoin="round">
+    <path d="m312 101 13-17 23 10 8 23-23 19-22-15Z" fill="#efe0d0"/>
+    <path d="m312 101 21 8 15-15m-23-10 8 25 23 8m-45 4 22-12v27m-21-35 21 35m-8-52 31 33"/>
+  </g>
+  <g fill="#f7f6f2" stroke="#b64b2d" stroke-width="1.2">
+    <circle cx="325" cy="84" r="2.4"/>
+    <circle cx="312" cy="101" r="2.4"/>
+    <circle cx="348" cy="94" r="2.4"/>
+    <circle cx="333" cy="109" r="2.4"/>
+    <circle cx="356" cy="117" r="2.4"/>
+    <circle cx="333" cy="136" r="2.4"/>
+    <circle cx="311" cy="121" r="2.4"/>
+  </g>
+
+  <!-- Rendering: light interacting with a shaded surface. -->
+  <ellipse cx="337" cy="248" rx="24" ry="4" fill="#ded6cb"/>
+  <circle cx="336" cy="226" r="21" fill="url(#render-light)" stroke="#b64b2d" stroke-width="1.2"/>
+  <g stroke="#b64b2d" stroke-width="1.5" stroke-linecap="round">
+    <path d="M310 193v12m-6-6h12m1 9 6 6m-13-2 6 3m5-14 3 6"/>
+  </g>
+
+  <!-- Simulation: a moving particle and its changing trajectory. -->
+  <path d="M308 361h50" stroke="#89917f" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M310 355q12-65 25-6 8-35 22-15" stroke="#b64b2d" stroke-width="1.6" stroke-dasharray="3 4" stroke-linecap="round"/>
+  <circle cx="335" cy="349" r="6" fill="#e4b79b" stroke="#b64b2d" stroke-width="1.5"/>
+  <circle cx="318" cy="325" r="4" fill="#f7f6f2" stroke="#b64b2d" stroke-width="1.2" opacity=".55"/>
+  <path d="m348 322 9 12-13-2" stroke="#b64b2d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#242923" font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="500">
+    <text x="372" y="117">Geometry</text>
+    <text x="372" y="231">Rendering</text>
+    <text x="372" y="345">Simulation</text>
+  </g>
+
+  <rect x="247" y="404" width="100" height="28" rx="14" fill="#f7f6f2"/>
+  <text x="297" y="424" text-anchor="middle" fill="#b64b2d" font-family="Avenir Next, Segoe UI, Helvetica, Arial, sans-serif" font-size="18">Observe</text>
+</svg>
