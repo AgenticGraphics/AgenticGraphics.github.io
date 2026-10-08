@@ -1,5 +1,14 @@
 # Image sources
 
+## Chunchao Guo portrait
+
+- File: `chunchao-guo.png`
+- Original dimensions: 784 × 501 pixels; PNG.
+- User-provided source: https://boolan.com/UploadResources/api/2bec69b230184d938f6c3c7803e537ab.png
+- Downloaded: 2026-10-08.
+
+The source image is stored unchanged. The speaker portrait uses CSS `object-fit: cover` and `object-position: center top` to crop the sides for the 88 × 88 pixel frame while keeping his face centered.
+
 ## SIGGRAPH Asia 2026 logo
 
 - File: `siggraph-asia-2026-logo.png`

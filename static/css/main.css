@@ -63,6 +63,8 @@ h1 { font-size: clamp(70px, 7.8vw, 108px); letter-spacing: -6.5px; line-height: 
 h1 > span:not(.title-period) { color: var(--accent); }
 .title-period { color: var(--accent); }
 .hero-description { color: var(--muted); font-size: 17px; line-height: 1.7; margin-top: 28px; letter-spacing: -.15px; }
+.workshop-time { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; width: fit-content; margin-top: 24px; padding: 10px 14px; border-left: 3px solid var(--accent); border-radius: 3px; background: #efe4d9; color: var(--accent-dark); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.workshop-time span { font-family: var(--mono); font-size: 11px; font-weight: 400; }
 .hero-art { position: relative; align-self: stretch; display: flex; flex-direction: column; justify-content: center; min-width: 0; padding-bottom: 36px; }
 .hero-art > img { width: 100%; height: auto; max-width: 100%; }
 .art-label, .art-coordinate { position: absolute; color: #797c72; font-family: var(--mono); font-size: 9px; letter-spacing: 1.3px; }
@@ -118,7 +120,6 @@ h2 { font-size: clamp(29px, 3vw, 40px); letter-spacing: -1.6px; line-height: 1.2
 .speaker-heading > div { min-width: 0; }
 .portrait-link { flex-shrink: 0; border-radius: 7px; overflow: hidden; }
 .speaker-portrait { width: 88px; height: 88px; object-fit: cover; object-position: center top; background: var(--surface); transition: transform .3s; }
-.speaker-portrait-placeholder { display: grid; place-items: center; flex-shrink: 0; border: 1px dashed var(--line); border-radius: 7px; color: var(--muted); }
 .portrait-link:hover img { transform: scale(1.04); }
 .speaker h3 { font-size: 19px; line-height: 1.35; letter-spacing: -.5px; margin: 6px 0 4px; }
 .link-arrow { display: inline-block; margin-left: 8px; font-size: 14px; color: #747b6e; font-weight: 400; transition: color .2s, transform .2s; }
