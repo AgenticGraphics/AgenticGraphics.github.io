@@ -21,3 +21,21 @@ The source image is stored unchanged. The speaker portrait uses CSS `object-fit:
 The logo is reproduced without modification. ACM SIGGRAPH's logo policy requires maintaining the official mark and proportions, and prohibits implying endorsement or combining it with another logo. See https://www.siggraph.org/about/logo-and-branding-guidelines/ and the conference logo design guide linked from the branding kit.
 
 The 2026 guide specifies clear space of at least one-quarter of this horizontal logo's height on all sides. Display it at least 34 pixels high. Do not apply shadows, outlines, gradients, color changes, or other effects to the mark.
+
+## Moonlake AI wordmark
+
+- File: `moonlake-wordmark-light.svg`
+- Original dimensions: 203 × 33 (SVG viewBox); white fill, for dark backgrounds.
+- Source: https://moonlake.ai/brand/wordmark-light.svg (a dark version is at `/brand/wordmark-dark.svg`).
+- Company website: https://moonlake.ai/
+- Downloaded: 2026-11-24.
+
+The wordmark is stored unchanged and shown as the workshop sponsor in the organizers section.
+
+## Yitong Deng portrait
+
+- File: `yitong-deng.jpg`
+- Source: https://yitongdeng.github.io/assets/img/head2023.jpg (2811 × 2811 pixels; JPEG).
+- Downloaded: 2026-11-24.
+
+Cropped to a square around the face (source pixels 1000–2595 horizontally, 720–2315 vertically) and resized to 800 × 800 pixels, because the original frames him small and off-center.

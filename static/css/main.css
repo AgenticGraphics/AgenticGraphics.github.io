@@ -109,6 +109,16 @@ h2 { font-size: clamp(36px, 3.6vw, 50px); letter-spacing: -1.6px; line-height: 1
 .schedule-table td:nth-child(2) { font-weight: 600; }
 .schedule-table td:last-child { color: var(--muted); font-size: 15px; }
 .session-note { display: block; color: var(--muted); font-size: 14px; font-weight: 400; margin-top: 2px; }
+.has-abstract:has(details[open]) td { vertical-align: top; }
+.talk-details { margin-top: 4px; font-weight: 400; }
+.talk-details summary { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; }
+.talk-details summary::-webkit-details-marker { display: none; }
+.talk-title { color: var(--ink); font-size: 15px; font-style: italic; line-height: 1.45; }
+.talk-toggle { flex: none; color: var(--accent); font-family: var(--mono); font-size: 12px; letter-spacing: .8px; text-transform: uppercase; white-space: nowrap; }
+.talk-toggle::after { content: " +"; }
+.talk-details[open] .talk-toggle::after { content: " \2212"; }
+.talk-details summary:hover .talk-toggle, .talk-details summary:focus-visible .talk-toggle { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
+.talk-abstract { margin-top: 12px; padding-left: 14px; border-left: 2px solid var(--accent); color: var(--muted); font-size: 15px; line-height: 1.7; }
 .schedule-break td { background: var(--beige); }
 .schedule-panel td { background: #fbe6e1; }
 .schedule-panel td:nth-child(2) { color: var(--accent-dark); }
@@ -124,6 +134,8 @@ h2 { font-size: clamp(36px, 3.6vw, 50px); letter-spacing: -1.6px; line-height: 1
 .speaker h3 { font-size: 23px; line-height: 1.25; letter-spacing: -.5px; }
 h3 a:hover { color: var(--accent); }
 .affiliation { color: var(--muted); font-size: 15px; line-height: 1.5; margin-top: 4px; }
+.speaker-role { display: inline-block; margin-bottom: 8px; padding: 3px 9px; border: 1px solid var(--accent); border-radius: 3px; color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+.panel-guest { display: block; margin-top: 10px; }
 .speaker-bio { color: #4a505a; font-size: 16px; line-height: 1.75; margin-top: 14px; }
 
 /* Organizers: compact dark band */
@@ -142,6 +154,13 @@ h3 a:hover { color: var(--accent); }
 .organizer p > span { color: #8f8f88; }
 
 /* Footer */
+.sponsor-strip { display: flex; align-items: center; gap: 40px; margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.14); }
+.sponsor-label { margin: 0; color: var(--salmon); font-family: var(--mono); font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
+.sponsor-logo { display: inline-flex; opacity: .92; transition: opacity .2s; }
+.sponsor-logo:hover, .sponsor-logo:focus-visible { opacity: 1; }
+.sponsor-logo img { height: 28px; width: auto; }
+.footer-sponsor { text-decoration: underline; text-underline-offset: 3px; }
+.footer-sponsor:hover { color: var(--accent); }
 .site-footer { border-top: 1px solid var(--line); padding-block: 48px; }
 .footer-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; }
 .footer-brand { font-size: 26px; font-weight: 700; letter-spacing: -.9px; }
@@ -214,6 +233,9 @@ h3 a:hover { color: var(--accent); }
   .schedule-table .schedule-time { font-size: 12px; white-space: normal; }
   .schedule-table td:last-child { font-size: 13px; }
   .session-note { font-size: 13px; }
+  .talk-details summary { flex-direction: column; gap: 6px; }
+  .talk-title { font-size: 14px; }
+  .talk-abstract { font-size: 14px; padding-left: 10px; }
   .speakers-grid { grid-template-columns: 1fr; row-gap: 48px; }
   .portrait-link { max-width: 420px; }
   .speaker h3 { font-size: 22px; }
@@ -221,6 +243,8 @@ h3 a:hover { color: var(--accent); }
   .organizers-grid { grid-template-columns: 1fr; gap: 22px; }
   .organizer-portrait-link { width: 64px; height: 64px; }
   .organizer h3 { font-size: 19px; }
+  .sponsor-strip { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 40px; padding-top: 28px; }
+  .sponsor-logo img { height: 24px; }
   .footer-inner { flex-wrap: wrap; gap: 25px; }
   .site-footer { padding-block: 34px; }
   .back-to-top { width: 100%; border-top: 1px solid var(--line); padding-top: 20px; }
